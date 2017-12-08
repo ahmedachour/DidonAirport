@@ -1,0 +1,131 @@
+﻿@model IEnumerable<Data.Models.flight>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_departure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_arrival)
+        </th>
+        <th>
+            @Html.DisplayName("prices")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.staff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plane)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.bus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.company)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_departure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_arrival)
+        </td>
+        <td>
+            @Html.DropDownList("prices", new SelectList(item.flight_pricemap, "priceMap_KEY", "priceMap"))
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.destination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.staff.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plane.name)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.bus.matricule)
+        </td>
+        <td>
+            @Html.ActionLink("Assign Staff To Flight", "assignStaffToFlight", new { id = item.id }) |
+            @Html.ActionLink("Assign Bus To Flight", "assignBusToFlight", new { id = item.id }) |
+            @Html.ActionLink("Assign Plane To Flight", "assignPlaneToFlight", new { id = item.id }) |
+            @Html.ActionLink("Find Baggages", "findAllBaggagesByFlightId", new { id = item.id }) |
+            @Html.ActionLink("Book Ticket", "BookTicket", new { id = item.id }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
+
+
+
+<br /><br /><br /><br />
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        var someStringValue = '@ViewBag.someStringValue';
+    var map;
+    function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var latlng = new google.maps.LatLng(36.8322, 10.1747);
+        var myOptions = {
+            zoom: 8,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map"), myOptions);
+        geocoder.geocode({ 'address': someStringValue }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                map.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: results[0].geometry.location
+                });
+            }
+        });
+        var marker = new google.maps.Marker
+        (
+            {
+                position: new google.maps.LatLng(36.8322, 10.1747),
+                map: map,
+                title: 'Click me'
+            }
+        );
+        var infowindow = new google.maps.InfoWindow({
+            content: 'Location info:<br/>Country Name:<br/>LatLng:'
+        });
+        google.maps.event.addListener(marker, 'click', function () {
+            // Calling the open method of the infoWindow
+            infowindow.open(map, marker);
+        });
+    }
+    window.onload = initialize;
+    </script>
+    <h2>Airport Location</h2>
+    <div id="map" style="height: 400px; width: 1000px; top: 10px; left: 50px; position: center;"></div>
+</asp:Content>
+<hr />

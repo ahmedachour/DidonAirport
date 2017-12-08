@@ -1,0 +1,14 @@
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\ConsoleTest.exe
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\ConsoleTest.pdb
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\Data.dll
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\Domain.dll
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\Service.dll
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\EntityFramework.dll
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\Data.pdb
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\Domain.pdb
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\Service.pdb
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\bin\Debug\EntityFramework.xml
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\obj\Debug\ConsoleTest.exe
+D:\esprit\SIGMA 2\PiDev\sprint DotNet\AirportERP_2emeSuivi\AirportERP_1ereVersion\AirportERP\ConsoleTest\obj\Debug\ConsoleTest.pdb

@@ -1,0 +1,42 @@
+﻿@model Data.Models.baggage
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>baggage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idFlight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idFlight)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
